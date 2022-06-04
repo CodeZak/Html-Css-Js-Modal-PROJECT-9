@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --display: none;
+}
+
+section::after {
+    z-index: 1;
+    display: var(--display);
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(12, 67, 169);
+    opacity: 0.4;
+    position: absolute;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/hero.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: white;
+    width: 600px;
+    max-width: 600px;
+    height: 250px;
+    box-shadow: 0.3px 0.3px 5px rgb(157, 153, 153);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.title {
+    font-size: 4em;
+    color: rgb(20, 20, 89);
+    font-weight: 600;
+}
+
+.content {
+    font-size: 2em;
+    color: rgb(21, 21, 49);
+    font-weight: 500;
+}
+
+button {
+    padding: 4px 6px;
+    color: white;
+    background-color: rgb(34, 104, 184);
+    font-size: 1.2em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: none;
+    border: 2px solid rgb(34, 104, 184);
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(197, 195, 195);
+}
+
+button:hover {
+    color: rgb(34, 104, 184);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.card_content {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0.3px 0.3px 5px rgb(157, 153, 153);
+    border-radius: 10px;
+    z-index: 2;
+    max-width: 550px;
+    width: 90%;
+    max-height: 250px;
+    height: 70%;
+
+}
+
+.card_content .close_btn {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    font-size: 2.4em;
+    cursor: pointer;
+    color: rgb(181, 40, 40);
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: 0.4s;
+}
+.close_btn:hover {
+    transform: scale(1.4, 1.4);
+    color: rgb(217, 89, 89);
+}
+
+@media only screen and (max-width: 570px) {
+    .title {
+        font-size: 3em;
+        text-align: center;
+    }
+
+}
